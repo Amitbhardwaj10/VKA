@@ -6,7 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 interface SplitTextRevealProps {
   children: React.ReactNode;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
   className?: string;
 }
 
@@ -61,9 +61,10 @@ export const SplitTextReveal: React.FC<SplitTextRevealProps> = ({
     }
 
     if (React.isValidElement(node)) {
-      return React.cloneElement(node as React.ReactElement, {
-        key: (node as React.ReactElement).key || `${instanceId}-el-${wordCounter++}`,
-        children: React.Children.map((node as React.ReactElement).props.children, parseNode),
+      const element = node as React.ReactElement<any>;
+      return React.cloneElement(element, {
+        key: element.key || `${instanceId}-el-${wordCounter++}`,
+        children: React.Children.map(element.props.children, parseNode),
       } as any);
     }
 

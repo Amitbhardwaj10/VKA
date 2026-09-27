@@ -7,7 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 interface AnimatedCounterProps {
   children: string;
   className?: string;
-  as?: keyof JSX.IntrinsicElements;
+  as?: React.ElementType;
 }
 
 export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
@@ -144,8 +144,8 @@ export const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
             className="gsap-counter-num"
             data-target={chunk.value}
             data-original={chunk.text}
-            data-has-commas={String(chunk.hasCommas)}
-            data-is-indian={String(chunk.isIndianFormat)}
+            data-has-commas={String('hasCommas' in chunk ? chunk.hasCommas : false)}
+            data-is-indian={String('isIndianFormat' in chunk ? chunk.isIndianFormat : false)}
           >
             {chunk.text}
           </span>
