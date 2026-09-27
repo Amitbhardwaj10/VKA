@@ -4,8 +4,9 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Compass, Layers, ShieldChec
 import { Navbar } from '../components/navigation/Navbar'
 import { Footer } from '../components/footer/Footer'
 import { SEO } from '../components/common/SEO'
-import { getServiceBySlug, servicesData } from '../data/services'
+import { getAnyServiceBySlug, servicesData, subServicesData } from '../data/services'
 import { SplitTextReveal } from '../components/animations/SplitTextReveal'
+import { ServiceCard } from '../components/services/ServiceCard'
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,7 +19,7 @@ const fadeUp = {
 
 export function ServiceDetailPage() {
   const { slug } = useParams<{ slug: string }>()
-  const service = getServiceBySlug(slug || '')
+  const service = getAnyServiceBySlug(slug || '')
 
   if (!service) {
     return <Navigate to="/services" replace />
@@ -157,6 +158,21 @@ export function ServiceDetailPage() {
             </motion.div>
           </div>
         </section>
+
+        {/* Sub-Services Cards Section (Only for main U.S. Accounting page) */}
+        {service.slug === 'us-accounting-tax-compliance-advisory' && (
+          <section className="services-grid-section section" style={{ paddingTop: '0', paddingBottom: '6rem' }}>
+            <div className="section-label-gold">
+              <span className="dash-line" />
+              <span className="label-text">OUR DISCIPLINES</span>
+            </div>
+            <div className="services-overview-grid" style={{ marginTop: '3rem' }}>
+              {subServicesData.map((subService, index) => (
+                <ServiceCard key={subService.slug} service={subService} index={index} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {/* Capabilities & Approach Section */}
         <section className="detail-capabilities-approach-section section">

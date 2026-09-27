@@ -16,7 +16,7 @@ export function Footer() {
           </p>
         </div>
 
-        <div className="footer-nav-col">
+        <div className="footer-nav-col footer-quick-links-col">
           <h4 className="footer-col-title">Quick Links</h4>
           <ul className="footer-links-list">
             <li><Link to="/">Home</Link></li>
@@ -58,9 +58,13 @@ export function Footer() {
       </div>
 
       <div className="footer-bottom-bar section">
-        <span className="footer-copyright">
-          © 2026 VKA Capital Bridge. All rights reserved.
-        </span>
+        <div className="footer-copyright" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px' }}>
+          <span>© {new Date().getFullYear()} VKA Capital Bridge. All rights reserved.</span>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+            Made with <span style={{ color: '#e74c3c', fontSize: '14px' }}>❤️</span> by 
+            <a href="https://nitgrid.nitstack.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a050', fontWeight: '600', textDecoration: 'none', letterSpacing: '0.5px' }}>NitStack</a>
+          </span>
+        </div>
         <div className="footer-legal-links">
           <a href="/#contact">Privacy Policy</a>
           <span>|</span>

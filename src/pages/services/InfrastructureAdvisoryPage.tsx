@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Compass, Layers, ShieldChec
 import { Navbar } from '../../components/navigation/Navbar'
 import { Footer } from '../../components/footer/Footer'
 import { SEO } from '../../components/common/SEO'
-import { getSubServiceBySlug } from '../../data/services'
+import { getServiceBySlug } from '../../data/services'
 import { SplitTextReveal } from '../../components/animations/SplitTextReveal'
 
 const fadeUp = {
@@ -16,11 +16,11 @@ const fadeUp = {
   }
 }
 
-export function UsAccountingPage() {
-  const service = getSubServiceBySlug('us-accounting-compliance')!
+export function InfrastructureAdvisoryPage() {
+  const service = getServiceBySlug('infrastructure-advisory')!
 
   return (
-    <div className="site service-detail-site page-us-accounting">
+    <div className="site service-detail-site page-infrastructure-advisory">
       <SEO title={service.seo.title} description={service.seo.description} />
       <div className="noise" />
       <Navbar />
@@ -40,13 +40,13 @@ export function UsAccountingPage() {
               <div className="section-label-gold">
                 <span className="dash-line" />
                 <span className="label-text" style={{ color: '#c9a050' }}>
-                  U.S. ACCOUNTING, TAX & COMPLIANCE
+                  SERVICES — INFRASTRUCTURE ADVISORY
                 </span>
               </div>
 
               <h1 className="services-hero-headline" style={{ color: '#ffffff' }}>
                 <SplitTextReveal>
-                  U.S. Accounting & <span className="text-accent-blue">Compliance</span>
+                  Infrastructure <span className="text-accent-blue">{service.heroHighlightWord}</span>
                 </SplitTextReveal>
               </h1>
 
@@ -57,42 +57,40 @@ export function UsAccountingPage() {
           </div>
         </section>
 
-        {/* Parent Service Breadcrumb */}
-        {service.parentSlug && (
-          <nav className="detail-service-pager" aria-label="Service navigation">
-            <div className="section pager-container">
-              <Link
-                to={`/services/${service.prev.slug}`}
-                className="pager-link pager-prev"
-                title={service.prev.title}
-              >
-                <ArrowLeft size={16} className="pager-arrow" />
-                <div className="pager-text-col">
-                  <span className="pager-kicker">Previous</span>
-                  <span className="pager-name">{service.prev.title}</span>
-                </div>
-              </Link>
-
-              <div className="pager-counter">
-                <span className="pager-current">{service.number}</span>
-                <span className="pager-sep">/</span>
-                <span className="pager-total">03</span>
+        {/* Previous / Next Service Navigation Bar */}
+        <nav className="detail-service-pager" aria-label="Service navigation">
+          <div className="section pager-container">
+            <Link
+              to={`/services/${service.prev.slug}`}
+              className="pager-link pager-prev"
+              title={service.prev.title}
+            >
+              <ArrowLeft size={16} className="pager-arrow" />
+              <div className="pager-text-col">
+                <span className="pager-kicker">Previous</span>
+                <span className="pager-name">{service.prev.title}</span>
               </div>
+            </Link>
 
-              <Link
-                to={`/services/${service.next.slug}`}
-                className="pager-link pager-next"
-                title={service.next.title}
-              >
-                <div className="pager-text-col text-right">
-                  <span className="pager-kicker">Next</span>
-                  <span className="pager-name">{service.next.title}</span>
-                </div>
-                <ArrowRight size={16} className="pager-arrow" />
-              </Link>
+            <div className="pager-counter">
+              <span className="pager-current">{service.number}</span>
+              <span className="pager-sep">/</span>
+              <span className="pager-total">06</span>
             </div>
-          </nav>
-        )}
+
+            <Link
+              to={`/services/${service.next.slug}`}
+              className="pager-link pager-next"
+              title={service.next.title}
+            >
+              <div className="pager-text-col text-right">
+                <span className="pager-kicker">Next</span>
+                <span className="pager-name">{service.next.title}</span>
+              </div>
+              <ArrowRight size={16} className="pager-arrow" />
+            </Link>
+          </div>
+        </nav>
 
         {/* Overview Section - Split Image & Text */}
         <section className="detail-overview-section section">
@@ -121,7 +119,7 @@ export function UsAccountingPage() {
             >
               <div className="section-label-gold">
                 <span className="dash-line" />
-                <span className="label-text">SERVICE OVERVIEW</span>
+                <span className="label-text">OVERVIEW</span>
               </div>
 
               <h2 className="overview-headline">
@@ -149,7 +147,7 @@ export function UsAccountingPage() {
             <div className="capabilities-column">
               <div className="section-label-gold">
                 <span className="dash-line" />
-                <span className="label-text">WHAT WE HANDLE</span>
+                <span className="label-text">KEY CAPABILITIES</span>
               </div>
 
               <div className="capabilities-numbered-list">
@@ -195,17 +193,13 @@ export function UsAccountingPage() {
                 ))}
               </div>
 
-              {/* In Practice / Situations Card */}
+              {/* Client Situations Card */}
               <div className="situations-callout-box">
-                <h4 className="situations-title">In Practice</h4>
+                <h4 className="situations-title">Representative Situations</h4>
                 <ul className="situations-list">
                   {service.situations.map((sit, idx) => (
                     <li key={idx} className="situation-item">
-                      {sit.title === 'In Practice' ? (
-                        <>{sit.description}</>
-                      ) : (
-                        <><strong>{sit.title}:</strong> {sit.description}</>
-                      )}
+                      <strong>{sit.title}:</strong> {sit.description}
                     </li>
                   ))}
                 </ul>
@@ -220,7 +214,7 @@ export function UsAccountingPage() {
             <div className="perspective-text-area">
               <div className="section-label-gold light-label">
                 <span className="dash-line" />
-                <span className="label-text">U.S. GAAP & FINANCIAL REPORTING</span>
+                <span className="label-text">GLOBAL PERSPECTIVE</span>
               </div>
               <h2 className="perspective-headline">
                 <SplitTextReveal>
@@ -271,25 +265,6 @@ export function UsAccountingPage() {
                 ))}
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Related Services */}
-        <section className="related-services-section section">
-          <div className="section-label-gold">
-            <span className="dash-line" />
-            <span className="label-text">RELATED SERVICES</span>
-          </div>
-          <div className="related-services-row">
-            <Link to="/services/us-investment-hedge-accounting" className="related-service-link">
-              U.S. Investment Hedge Accounting <ArrowUpRight size={14} />
-            </Link>
-            <Link to="/services/international-taxation" className="related-service-link">
-              International Taxation <ArrowUpRight size={14} />
-            </Link>
-            <Link to="/services/us-accounting-tax-compliance-advisory" className="related-service-link">
-              U.S. Accounting, Tax & Compliance Advisory <ArrowUpRight size={14} />
-            </Link>
           </div>
         </section>
 

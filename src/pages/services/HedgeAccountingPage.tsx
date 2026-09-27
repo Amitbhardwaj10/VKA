@@ -4,7 +4,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, Check, Compass, Layers, ShieldChec
 import { Navbar } from '../../components/navigation/Navbar'
 import { Footer } from '../../components/footer/Footer'
 import { SEO } from '../../components/common/SEO'
-import { getServiceBySlug } from '../../data/services'
+import { getSubServiceBySlug } from '../../data/services'
 import { SplitTextReveal } from '../../components/animations/SplitTextReveal'
 
 const fadeUp = {
@@ -17,7 +17,7 @@ const fadeUp = {
 }
 
 export function HedgeAccountingPage() {
-  const service = getServiceBySlug('us-investment-hedge-accounting')!
+  const service = getSubServiceBySlug('us-investment-hedge-accounting')!
 
   return (
     <div className="site service-detail-site page-hedge-accounting">
@@ -40,7 +40,7 @@ export function HedgeAccountingPage() {
               <div className="section-label-gold">
                 <span className="dash-line" />
                 <span className="label-text" style={{ color: '#c9a050' }}>
-                  SERVICES — U.S. INVESTMENT HEDGE ACCOUNTING
+                  U.S. ACCOUNTING, TAX & COMPLIANCE
                 </span>
               </div>
 
@@ -50,14 +50,14 @@ export function HedgeAccountingPage() {
                 </SplitTextReveal>
               </h1>
 
-              <p className="services-hero-lead" style={{ color: '#e0e0e0', maxWidth: '700px' }}>
-                {service.description}
+              <p className="services-hero-lead" style={{ color: '#e0e0e0', maxWidth: '740px' }}>
+                Companies use financial contracts to protect themselves against price swings. Hedge accounting under ASC 815 is the technical discipline of documenting and testing these hedges so financial statements reflect the underlying economics rather than unnecessary accounting volatility.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Previous / Next Service Navigation Bar */}
+        {/* Sub-Service Navigation Bar */}
         <nav className="detail-service-pager" aria-label="Service navigation">
           <div className="section pager-container">
             <Link
@@ -75,7 +75,7 @@ export function HedgeAccountingPage() {
             <div className="pager-counter">
               <span className="pager-current">{service.number}</span>
               <span className="pager-sep">/</span>
-              <span className="pager-total">06</span>
+              <span className="pager-total">03</span>
             </div>
 
             <Link
@@ -92,7 +92,7 @@ export function HedgeAccountingPage() {
           </div>
         </nav>
 
-        {/* Overview Section - Split Image & Text */}
+        {/* Overview Section - What Hedge Accounting Means */}
         <section className="detail-overview-section section">
           <div className="detail-overview-grid">
             <motion.div
@@ -119,7 +119,7 @@ export function HedgeAccountingPage() {
             >
               <div className="section-label-gold">
                 <span className="dash-line" />
-                <span className="label-text">OVERVIEW</span>
+                <span className="label-text">WHAT HEDGE ACCOUNTING MEANS</span>
               </div>
 
               <h2 className="overview-headline">
@@ -143,11 +143,11 @@ export function HedgeAccountingPage() {
         {/* Capabilities & Approach Section */}
         <section className="detail-capabilities-approach-section section">
           <div className="capabilities-approach-grid">
-            {/* Left: Key Capabilities List */}
+            {/* Left: Why Documentation & Testing Matter */}
             <div className="capabilities-column">
               <div className="section-label-gold">
                 <span className="dash-line" />
-                <span className="label-text">KEY CAPABILITIES</span>
+                <span className="label-text">WHY DOCUMENTATION & TESTING MATTER</span>
               </div>
 
               <div className="capabilities-numbered-list">
@@ -193,13 +193,17 @@ export function HedgeAccountingPage() {
                 ))}
               </div>
 
-              {/* Client Situations Card */}
+              {/* In Practice Scenario */}
               <div className="situations-callout-box">
-                <h4 className="situations-title">Representative Situations</h4>
+                <h4 className="situations-title">In Practice</h4>
                 <ul className="situations-list">
                   {service.situations.map((sit, idx) => (
                     <li key={idx} className="situation-item">
-                      <strong>{sit.title}:</strong> {sit.description}
+                      {sit.title === 'In Practice' ? (
+                        <>{sit.description}</>
+                      ) : (
+                        <><strong>{sit.title}:</strong> {sit.description}</>
+                      )}
                     </li>
                   ))}
                 </ul>
@@ -214,7 +218,7 @@ export function HedgeAccountingPage() {
             <div className="perspective-text-area">
               <div className="section-label-gold light-label">
                 <span className="dash-line" />
-                <span className="label-text">GLOBAL PERSPECTIVE</span>
+                <span className="label-text">CAPITAL MARKET COMPLEXITY</span>
               </div>
               <h2 className="perspective-headline">
                 <SplitTextReveal>
@@ -265,6 +269,25 @@ export function HedgeAccountingPage() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Related U.S. Accounting Services */}
+        <section className="related-services-section section">
+          <div className="section-label-gold">
+            <span className="dash-line" />
+            <span className="label-text">RELATED U.S. ACCOUNTING SERVICES</span>
+          </div>
+          <div className="related-services-row">
+            <Link to="/services/us-accounting-compliance" className="related-service-link">
+              U.S. Accounting & Compliance <ArrowUpRight size={14} />
+            </Link>
+            <Link to="/services/international-taxation" className="related-service-link">
+              International Taxation <ArrowUpRight size={14} />
+            </Link>
+            <Link to="/services/us-accounting-tax-compliance-advisory" className="related-service-link">
+              U.S. Accounting, Tax & Compliance Advisory <ArrowUpRight size={14} />
+            </Link>
           </div>
         </section>
 

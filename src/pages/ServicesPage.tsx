@@ -57,7 +57,7 @@ export function ServicesPage() {
           </div>
         </section>
 
-        {/* 6 Services Grid */}
+        {/* 5 Services Grid */}
         <section className="services-grid-section section">
           <div className="services-overview-grid">
             {servicesData.map((service, index) => (

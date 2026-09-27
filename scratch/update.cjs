@@ -1,228 +1,27 @@
-import imgInsuranceRisk from '../assets/services/service-insurance-risk.jpg'
-import imgUsAccounting from '../assets/services/service-us-accounting.jpg'
-import imgHedgeAccounting from '../assets/services/service-hedge-accounting.jpg'
-import imgInternationalTax from '../assets/services/service-international-tax.jpg'
-import imgRealEstate from '../assets/services/service-real-estate.jpg'
-import imgManagementConsultancy from '../assets/services/service-management-consultancy.jpg'
+const fs = require('fs');
 
-export interface CapabilityItem {
-  number: string
-  title: string
-  description: string
+const content = fs.readFileSync('src/data/services.ts', 'utf8');
+
+const startStr = `  {
+    slug: 'us-accounting-compliance',
+    number: '02',`;
+
+const endStr = `  {
+    slug: 'real-estate-investment',
+    number: '05',`;
+
+const startIdx = content.indexOf(startStr);
+const endIdx = content.indexOf(endStr);
+
+if (startIdx === -1 || endIdx === -1) {
+  console.error("Could not find start or end strings!");
+  process.exit(1);
 }
 
-export interface ApproachStep {
-  number: string
-  title: string
-  description: string
-}
+const before = content.substring(0, startIdx);
+const after = content.substring(endIdx);
 
-export interface ClientSituation {
-  title: string
-  description: string
-}
-
-export interface ServiceData {
-  slug: string
-  number: string
-  title: string
-  shortTitle: string
-  heroHighlightWord: string
-  category: string
-  kicker: string
-  tag: string
-  description: string
-  cardImage: string
-  heroImage: string
-  overviewImage: string
-  perspectiveImage: string
-  subServices?: any[]
-  parentSlug?: string
-  overview: {
-    heading: string
-    subheading: string
-    lead: string
-    paragraphs: string[]
-  }
-  capabilities: CapabilityItem[]
-  approach: {
-    heading: string
-    subheading: string
-    lead: string
-    steps: ApproachStep[]
-  }
-  situations: ClientSituation[]
-  crossBorder: {
-    heading: string
-    subheading: string
-    lead: string
-    paragraph: string
-  }
-  whyVka: {
-    heading: string
-    subheading: string
-    lead: string
-    paragraph: string
-    points: string[]
-  }
-  cta: {
-    heading: string
-    description: string
-    buttonText: string
-  }
-  prev: {
-    slug: string
-    title: string
-  }
-  next: {
-    slug: string
-    title: string
-  }
-  seo: {
-    title: string
-    description: string
-  }
-}
-
-export const servicesData: ServiceData[] = [
-  {
-    slug: 'insurance-risk-management',
-    number: '01',
-    title: 'Insurance & Risk Management Advisory',
-    shortTitle: 'Insurance & Risk',
-    heroHighlightWord: 'Advisory',
-    category: 'Risk & Capital Protection',
-    kicker: 'Risk Architecture & Placements',
-    tag: 'Surety Bonds ┬╖ Lender Compliant',
-    description:
-      'Enterprise risk assessment and insurance program structuring ΓÇö surety bonds, political risk, trade credit and property/casualty placement ΓÇö aligned to lender and regulatory requirements.',
-    cardImage: imgInsuranceRisk,
-    heroImage: imgInsuranceRisk,
-    overviewImage: '/images/services/insurance-risk-management.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1542296332-2e4473faf563?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Managing risk.',
-      subheading: 'Enabling progress.',
-      lead: 'We help clients identify, assess and mitigate risk through structured insurance and risk management solutions.',
-      paragraphs: [
-        'Our advisory approach aligns with lender, regulatory and operational requirements, ensuring long-term resilience and confidence in your capital and assets.',
-        'Risk rarely sits in one place. A project may depend on financing terms, contractual obligations, insurance covenants and the counterparties behind them. We bring those exposures into one clear view, then structure coverage around how the business actually operates.'
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Enterprise Risk Assessment',
-        description: 'Evaluate and prioritize risks across operations, balance sheet assets and operating markets.'
-      },
-      {
-        number: '02',
-        title: 'Insurance Program Structuring',
-        description: 'Design tailored insurance architectures for optimal asset protection and cost efficiency.'
-      },
-      {
-        number: '03',
-        title: 'Surety Bonds',
-        description: 'Support project and performance requirements with reliable, collateral-efficient surety solutions.'
-      },
-      {
-        number: '04',
-        title: 'Political Risk',
-        description: 'Mitigate sovereign, regulatory and expropriation exposure in cross-border capital investments.'
-      },
-      {
-        number: '05',
-        title: 'Trade Credit',
-        description: 'Manage accounts receivable and counterparty insolvency risk across global supply routes.'
-      },
-      {
-        number: '06',
-        title: 'Property & Casualty Placement',
-        description: 'Arrange comprehensive physical asset and liability coverage matched to operational risk profiles.'
-      },
-      {
-        number: '07',
-        title: 'Lender & Regulatory Requirements',
-        description: 'Ensure institutional compliance with bank syndicates, multilateral lenders and statutory standards.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Practical. Structured. Global.',
-      lead: 'We combine deep sector knowledge with a disciplined process to deliver insurance and risk solutions that support your commercial objectives.',
-      steps: [
-        {
-          number: '01',
-          title: 'Assess',
-          description: 'Map balance sheet exposures, contract terms and lender debt covenants across all operational units.'
-        },
-        {
-          number: '02',
-          title: 'Structure',
-          description: 'Design program specifications, deductible structures and syndicated risk placement layers.'
-        },
-        {
-          number: '03',
-          title: 'Execute',
-          description: 'Coordinate with domestic and international underwriting syndicates for seamless policy issuance.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'Large-Scale Infrastructure Bidding',
-        description: 'Contractors requiring performance surety bonds to replace bank guarantee lines and preserve working capital.'
-      },
-      {
-        title: 'Cross-Border Capital Deployment',
-        description: 'Institutional investors structuring political risk and currency inconvertibility protection in frontier markets.'
-      },
-      {
-        title: 'Project Finance Debt Syndication',
-        description: 'Developers satisfying stringent technical insurance due diligence mandated by multilateral project lenders.'
-      }
-    ],
-    crossBorder: {
-      heading: 'Cross-border insight.',
-      subheading: 'Local execution.',
-      lead: 'Risk does not stop at national borders.',
-      paragraph:
-        'Our global market perspective helps you navigate disparate regulatory environments, regional political developments, and international reinsurance markets with clarity and institutional rigor.'
-    },
-    whyVka: {
-      heading: 'Experience. Independence. Focus.',
-      subheading: 'WHY VKA',
-      lead: 'We provide objective advisory and structured solutions that protect balance sheets and create commercial value.',
-      paragraph:
-        'Unlike volume-driven brokers, our role is strictly fiduciary and strategic. We evaluate your obligations from a lender and contractor perspective, eliminating redundant premiums while closing critical coverage gaps.',
-      points: [
-        'Independent advisory approach',
-        'Global underwriting market access',
-        'Deep infrastructure sector understanding',
-        'Long-term commercial partnership mindset'
-      ]
-    },
-    cta: {
-      heading: "Let's build a more resilient future.",
-      description:
-        'Talk to our team to discuss how our enterprise risk and insurance advisory services can protect your capital and projects.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'advisory-management-consultancy',
-      title: 'Advisory & Management Consultancy'
-    },
-    next: {
-      slug: 'infrastructure-advisory',
-      title: 'Infrastructure Advisory'
-    },
-    seo: {
-      title: 'Insurance & Risk Management Advisory | VKA Capital Bridge',
-      description:
-        'Enterprise risk assessment, surety bond program structuring, and lender-compliant insurance placement for infrastructure and corporate enterprises.'
-    }
-  },
-  {
+const newMiddle = `  {
     slug: 'infrastructure-advisory',
     number: '02',
     title: 'Infrastructure Advisory',
@@ -342,7 +141,7 @@ export const servicesData: ServiceData[] = [
     overview: {
       heading: 'Capital freedom.',
       subheading: 'Contractual certainty.',
-      lead: 'Performance security shouldn\'t paralyze your balance sheet.',
+      lead: 'Performance security shouldn\\'t paralyze your balance sheet.',
       paragraphs: [
         'Contractors and suppliers are frequently required to post significant collateral to secure performance bonds or bank guarantees. We structure alternative surety facilities that satisfy obligee requirements without tying up critical working capital.',
         'Our advisory ensures you meet complex international and domestic bidding requirements while maintaining the liquidity needed to actually execute the project.'
@@ -403,7 +202,7 @@ export const servicesData: ServiceData[] = [
       heading: 'Market leverage. Technical precision.',
       subheading: 'WHY VKA',
       lead: 'We understand both the underwriting requirements of the surety market and the commercial realities of the contractor.',
-      paragraph: 'Our independence allows us to source the most capital-efficient solutions without being tied to a single financial institution\'s credit appetite.',
+      paragraph: 'Our independence allows us to source the most capital-efficient solutions without being tied to a single financial institution\\'s credit appetite.',
       points: [
         'Extensive surety market relationships',
         'Deep understanding of construction finance',
@@ -446,20 +245,17 @@ export const servicesData: ServiceData[] = [
       {
         title: 'U.S. Accounting & Compliance',
         description: "We keep a company's financial records accurate, aligned with U.S. GAAP, and structured so they hold up under scrutiny — whether that scrutiny comes from an auditor, a regulator, a lender, or a prospective investor.",
-        route: '/services/us-accounting-compliance',
-        slug: 'us-accounting-compliance'
+        route: '/services/us-accounting-compliance'
       },
       {
         title: 'U.S. Investment Hedge Accounting',
         description: "Companies use financial contracts to protect themselves against price swings. Hedge accounting under ASC 815 is the technical discipline of documenting and testing these hedges so financial statements reflect the underlying economics rather than unnecessary accounting volatility.",
-        route: '/services/us-investment-hedge-accounting',
-        slug: 'us-investment-hedge-accounting'
+        route: '/services/us-investment-hedge-accounting'
       },
       {
         title: 'International Taxation',
         description: "A company operating across multiple countries can face overlapping tax obligations. We focus on areas such as tax treaties, transfer pricing and applicable international tax rules to help structure cross-border operations and compliance appropriately.",
-        route: '/services/international-taxation',
-        slug: 'international-taxation'
+        route: '/services/international-taxation'
       }
     ],
     overview: {
@@ -550,376 +346,22 @@ export const servicesData: ServiceData[] = [
       description: 'Integrated U.S. GAAP reporting, ASC 815 hedge accounting, and international tax structuring.'
     }
   },
-  {
-    slug: 'real-estate-investment',
-    number: '05',
-    title: 'Real Estate Investment',
-    shortTitle: 'Real Estate',
-    heroHighlightWord: 'Investment',
-    category: 'Capital Structuring & Assets',
-    kicker: 'Capital Structuring & Assets',
-    tag: 'Cross-Border ┬╖ Due Diligence',
-    description:
-      'Acquisition due diligence, capital structuring and portfolio strategy across commercial and residential assets, including cross-border investment structuring.',
-    cardImage: imgRealEstate,
-    heroImage: imgRealEstate,
-    overviewImage: '/images/services/real-estate-investment.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Real assets.',
-      subheading: 'Disciplined capital.',
-      lead: 'Direct real estate investment demands rigorous financial underwriting and sound jurisdictional structuring.',
-      paragraphs: [
-        'We advise high-net-worth investors, family offices, and developers on acquisition due diligence, capital stack structuring, and cross-border asset holding strategies.',
-        'From high-yield commercial assets in emerging financial centers to prime residential portfolios, we focus on fundamental asset quality, lease covenant strength, and clear exit mechanisms rather than speculative market hype.'
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Acquisition Due Diligence',
-        description: 'Comprehensive financial, technical, and title validation to verify asset valuation and cash flow viability.'
-      },
-      {
-        number: '02',
-        title: 'Capital Stack Structuring',
-        description: 'Optimizing senior debt, mezzanine finance, and equity participation to lower blended capital costs.'
-      },
-      {
-        number: '03',
-        title: 'Portfolio Strategy',
-        description: 'Strategic allocation across asset classes, geographical submarkets, and yield-generation profiles.'
-      },
-      {
-        number: '04',
-        title: 'Cross-Border Asset Holding',
-        description: 'Structuring SPVs, trust entities, and tax-efficient vehicles for international real estate acquisitions.'
-      },
-      {
-        number: '05',
-        title: 'Developer Direct Interface',
-        description: 'Facilitating direct, un-intermediated relationships with premier tier-one master developers.'
-      },
-      {
-        number: '06',
-        title: 'Lease & Covenant Analysis',
-        description: 'Review of tenant solvency, rent escalation clauses, and long-term operating net cash flow predictability.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Analytical. Objective. Unaligned.',
-      lead: 'We do not sell properties; we advise on capital deployment and underwriting integrity.',
-      steps: [
-        {
-          number: '01',
-          title: 'Underwrite',
-          description: 'Evaluate physical asset condition, location fundamentals, historical yields, and rent roll reliability.'
-        },
-        {
-          number: '02',
-          title: 'Structure',
-          description: 'Design holding entities, tax treaty routing, and debt capitalization tailored to investor objectives.'
-        },
-        {
-          number: '03',
-          title: 'Execute',
-          description: 'Oversee contractual closing, escrow protocols, and transition into operational asset management.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'Global Wealth Asset Diversification',
-        description: 'Family offices acquiring prime commercial real estate in global financial gateways to hedge domestic risk.'
-      },
-      {
-        title: 'Developer Joint Venture Structuring',
-        description: 'Landowners and equity partners establishing clear equity-sharing, development milestones, and waterfall returns.'
-      },
-      {
-        title: 'Cross-Border Residential Portfolios',
-        description: 'HNIs navigating foreign exchange regulations and residency-linked property investments in premier jurisdictions.'
-      }
-    ],
-    crossBorder: {
-      heading: 'International real asset flows.',
-      subheading: 'Sovereign clarity.',
-      lead: 'Property acquisition across jurisdictions involves distinct legal traditions, registration fees, and tax implications.',
-      paragraph:
-        'We help investors navigate currency repatriation protocols, local zoning laws, and municipal ownership restrictions to ensure real estate investments remain liquid and legally protected.'
-    },
-    whyVka: {
-      heading: 'Fiduciary posture. Institutional rigor.',
-      subheading: 'WHY VKA',
-      lead: 'We maintain complete independence from broker sales quotas and transaction commissions.',
-      paragraph:
-        'Our sole objective is ensuring your capital is deployed into fundamentally sound real assets, protected by robust legal structuring and conservative financial modeling.',
-      points: [
-        'Strictly advisory-first, non-broker model',
-        'Direct access to institutional development partners',
-        'In-depth cross-border tax and SPV structuring capability',
-        'End-to-end transaction due diligence oversight'
-      ]
-    },
-    cta: {
-      heading: 'Evaluate your real estate capital strategy.',
-      description:
-        'Contact our real estate investment advisory group to discuss prospective acquisitions or portfolio restructuring.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'us-accounting-tax-compliance-advisory',
-      title: 'U.S. Accounting, Tax & Compliance Advisory'
-    },
-    next: {
-      slug: 'advisory-management-consultancy',
-      title: 'Advisory & Management Consultancy'
-    },
-    seo: {
-      title: 'Real Estate Investment Advisory | VKA Capital Bridge',
-      description:
-        'Real estate acquisition due diligence, capital structuring, and portfolio strategy across prime commercial and residential assets.'
-    }
-  },
-  {
-    slug: 'advisory-management-consultancy',
-    number: '06',
-    title: 'Advisory & Management Consultancy',
-    shortTitle: 'Management Consultancy',
-    heroHighlightWord: 'Consultancy',
-    category: 'Strategic Growth & Transition',
-    kicker: 'Strategic Growth & Transition',
-    tag: 'Capital Raising ┬╖ M&A Strategy',
-    description:
-      'Strategic and operational consulting ΓÇö business planning, capital raising support and organizational restructuring for businesses navigating growth or transition.',
-    cardImage: imgManagementConsultancy,
-    heroImage: imgManagementConsultancy,
-    overviewImage: '/images/services/advisory-management.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Decisive strategy.',
-      subheading: 'Commercial momentum.',
-      lead: 'Significant enterprise transitions require seasoned strategic perspective and rigorous operational execution.',
-      paragraphs: [
-        'We advise owners, boards, and leadership teams navigating pivotal commercial moments ΓÇö whether preparing for institutional capital raising, restructuring underperforming divisions, or entering new international markets.',
-        'We do not deliver theoretical slide decks. Our advisory is anchored in balance sheet realities, capital structure discipline, and executive-level governance that drives measurable commercial outcomes.'
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Business Planning & Modeling',
-        description: 'Developing defensible five-year financial models, sensitivity scenarios, and commercial business plans.'
-      },
-      {
-        number: '02',
-        title: 'Capital Raising Support',
-        description: 'Preparation of institutional information memorandums, dataroom readiness, and debt/equity syndicate facilitation.'
-      },
-      {
-        number: '03',
-        title: 'Organizational Restructuring',
-        description: 'Refining executive reporting lines, cost structures, and operational governance for scalable efficiency.'
-      },
-      {
-        number: '04',
-        title: 'M&A Transaction Advisory',
-        description: 'Strategic target evaluation, synergy modeling, and commercial negotiation support during M&A discussions.'
-      },
-      {
-        number: '05',
-        title: 'Joint Venture Formations',
-        description: 'Structuring governance agreements, capital contribution schedules, and dispute mechanisms for strategic partnerships.'
-      },
-      {
-        number: '06',
-        title: 'Corporate Turnaround Strategy',
-        description: 'Crisis cash management, debt renegotiation, and non-core asset divestment for stressed operations.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Pragmatic. Commercial. Decisive.',
-      lead: 'We partner closely with leadership to resolve bottlenecks and unlock enterprise growth.',
-      steps: [
-        {
-          number: '01',
-          title: 'Diagnose',
-          description: 'Conduct rapid financial, operational, and commercial audits to identify structural constraints.'
-        },
-        {
-          number: '02',
-          title: 'Formulate',
-          description: 'Develop concrete strategic initiatives with assigned accountability, capital requirements, and timelines.'
-        },
-        {
-          number: '03',
-          title: 'Execute',
-          description: 'Work alongside management through critical implementation stages and stakeholder negotiations.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'Scaling from Mid-Market to Institutional',
-        description: 'Privately held companies professionalizing governance and reporting to secure institutional private equity.'
-      },
-      {
-        title: 'Generational or Leadership Transition',
-        description: 'Family-owned enterprises establishing independent board structures and transparent management succession frameworks.'
-      },
-      {
-        title: 'Strategic Market Entry',
-        description: 'Established corporations evaluating cross-border joint ventures or direct corporate expansion into new territories.'
-      }
-    ],
-    crossBorder: {
-      heading: 'Navigating international growth.',
-      subheading: 'Strategic clarity.',
-      lead: 'Expanding across borders challenges traditional operating models and leadership bandwidth.',
-      paragraph:
-        'We help management teams evaluate cultural, legal, and operational nuances in target jurisdictions, structuring international operations to ensure sustainable long-term performance.'
-    },
-    whyVka: {
-      heading: 'Direct experience. Uncompromising integrity.',
-      subheading: 'WHY VKA',
-      lead: 'We operate as an extension of the executive suite, bringing decades of commercial deal-making experience.',
-      paragraph:
-        'Our advice is candid, objective, and solely aligned with long-term shareholder value creation, unencumbered by corporate bureaucracy or conflicts of interest.',
-      points: [
-        'Board-level strategic and operational advisory',
-        'Demonstrated track record in complex capital raising',
-        'Hands-on execution support from senior partners',
-        'Deep network across institutional capital providers'
-      ]
-    },
-    cta: {
-      heading: 'Accelerate your commercial strategy.',
-      description:
-        'Schedule a confidential discussion with our senior advisory team to review your corporate growth or transition objectives.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
-    },
-    next: {
-      slug: 'insurance-risk-management',
-      title: 'Insurance & Risk Management Advisory'
-    },
-    seo: {
-      title: 'Advisory & Management Consultancy | VKA Capital Bridge',
-      description:
-        'Strategic and operational consultancy, business planning, institutional capital raising support, and organizational restructuring.'
-    }
-  }
-]
+`;
 
-export const subServicesData: ServiceData[] = [
-  {
-    slug: 'dubai-real-estate-capital-bridge',
-    number: '01',
-    title: 'Dubai Real Estate Capital Bridge',
-    shortTitle: 'Dubai Real Estate',
-    heroHighlightWord: 'Dubai',
-    category: 'Real Estate Investment',
-    kicker: 'Global Asset Allocation',
-    tag: 'Dubai · Premium Assets',
-    description: "Exclusive access to Dubai's tier-one master developers and high-yield real estate assets, structured for international investors seeking capital appreciation, secure rental yields, and jurisdictional diversification.",
-    cardImage: '/images/services/real-estate-investment.jpg',
-    heroImage: '/images/services/real-estate-investment.jpg',
-    overviewImage: '/images/services/real-estate-investment.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Gateway to global assets.',
-      subheading: 'Unmatched structural advantages.',
-      lead: "Dubai has transitioned from a regional hub into a primary destination for global capital preservation and yield generation.",
-      paragraphs: [
-        'Through our direct relationships with tier-one master developers in the UAE, we bypass traditional broker networks to secure premium inventory for our clients before it reaches the retail market.',
-        'We guide investors through the entire acquisition lifecycle—from initial asset selection and financial underwriting to structural closing and long-term property management.'
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Direct Developer Access',
-        description: 'Priority allocations and VIP inventory access with top-tier Dubai master developers.'
-      },
-      {
-        number: '02',
-        title: 'Investment Underwriting',
-        description: 'Rigorous financial analysis of projected capital appreciation and net rental yields.'
-      },
-      {
-        number: '03',
-        title: 'Golden Visa & Structuring',
-        description: 'Facilitating investor residency programs and optimal corporate holding structures.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Selective. Strategic. Secure.',
-      lead: 'We treat real estate acquisition as a serious capital allocation exercise, not a speculative purchase.',
-      steps: [
-        {
-          number: '01',
-          title: 'Source',
-          description: 'Identify premium off-plan and secondary market assets aligned with your yield requirements.'
-        },
-        {
-          number: '02',
-          title: 'Structure',
-          description: 'Navigate escrow payments, DLD registration, and secure transactional frameworks.'
-        },
-        {
-          number: '03',
-          title: 'Manage',
-          description: 'Provide end-to-end post-handover management to ensure consistent cash flow realization.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'Capital Flight & Diversification',
-        description: "High-net-worth families reallocating capital from volatile jurisdictions into Dubai's secure, tax-efficient real estate market."
-      }
-    ],
-    crossBorder: {
-      heading: 'A tax-efficient safe haven.',
-      subheading: 'Global liquidity.',
-      lead: 'Dubai offers zero capital gains tax and no property taxes, creating an unparalleled environment for asset growth.',
-      paragraph: 'We ensure international investors can efficiently deploy capital into the UAE while maintaining full compliance with their home country reporting requirements.'
-    },
-    whyVka: {
-      heading: 'Institutional access. Fiduciary care.',
-      subheading: 'WHY VKA',
-      lead: 'We are not real estate agents; we are capital advisors managing your global asset exposure.',
-      paragraph: 'Our Capital Bridge provides a direct, un-intermediated conduit to Dubai’s most lucrative real estate opportunities, backed by our rigorous financial diligence.',
-      points: [
-        'Zero-commission, fiduciary-first advisory model',
-        'Direct relationships with government-backed developers',
-        'End-to-end transaction and residency facilitation'
-      ]
-    },
-    cta: {
-      heading: 'Diversify into global real estate.',
-      description: 'Speak with our Dubai investment desk to explore current premium allocations and structural requirements.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
-    },
-    next: {
-      slug: 'advisory-management-consultancy',
-      title: 'Advisory & Management Consultancy'
-    },
-    seo: {
-      title: 'Dubai Real Estate Capital Bridge | VKA Capital Bridge',
-      description: 'Exclusive access to tier-one Dubai real estate investments, offering capital appreciation, high yields, and tax efficiency.'
-    }
-  },
+let finalContent = before + newMiddle + after;
+
+// Now append subServicesData and modify navServicesHierarchy
+const navStr = "export const navServicesHierarchy: NavServiceItem[] = [";
+const navStartIdx = finalContent.indexOf(navStr);
+
+if (navStartIdx === -1) {
+  console.error("Could not find navServicesHierarchy!");
+  process.exit(1);
+}
+
+const beforeNav = finalContent.substring(0, navStartIdx);
+
+const subServicesAndNav = `export const subServicesData: ServiceData[] = [
   {
     slug: 'us-accounting-compliance',
     number: '01',
@@ -1225,24 +667,6 @@ export const subServicesData: ServiceData[] = [
   }
 ];
 
-export function getServiceBySlug(slug: string): ServiceData | undefined {
-  return servicesData.find((s) => s.slug === slug) || subServicesData.find((s) => s.slug === slug)
-}
-
-export function getAnyServiceBySlug(slug: string): ServiceData | undefined {
-  return getServiceBySlug(slug)
-}
-
-export function getSubServiceBySlug(slug: string): ServiceData | undefined {
-  return getServiceBySlug(slug)
-}
-
-export interface NavServiceItem {
-  slug: string
-  title: string
-  children?: NavServiceItem[]
-}
-
 export const navServicesHierarchy: NavServiceItem[] = [
   {
     slug: 'infrastructure-advisory',
@@ -1285,3 +709,14 @@ export const navServicesHierarchy: NavServiceItem[] = [
     title: 'Advisory & Management Consultancy'
   }
 ]
+`;
+
+finalContent = beforeNav + subServicesAndNav;
+
+finalContent = finalContent.replace(
+  'return getServiceBySlug(slug)',
+  'return getServiceBySlug(slug) || subServicesData.find(s => s.slug === slug)'
+);
+
+fs.writeFileSync(filePath, finalContent, 'utf8');
+console.log('Successfully updated src/data/services.ts');

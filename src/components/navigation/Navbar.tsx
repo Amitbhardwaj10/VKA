@@ -1,13 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ArrowUpRight, ChevronDown, Menu, X } from 'lucide-react'
+import { ArrowUpRight, ChevronDown, ChevronRight, Menu, X } from 'lucide-react'
 import vkaLogo from '../../assets/vka-logo.png'
-import { servicesData } from '../../data/services'
+import { navServicesHierarchy } from '../../data/services'
 
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
+  const [expandedMobileItem, setExpandedMobileItem] = useState<string | null>(null)
   const dropdownTimeoutRef = useRef<number | null>(null)
   const location = useLocation()
 
@@ -30,6 +31,7 @@ export function Navbar() {
   useEffect(() => {
     setMenuOpen(false)
     setDropdownOpen(false)
+    setExpandedMobileItem(null)
   }, [location.pathname])
 
   const handleMouseEnter = () => {
@@ -96,18 +98,50 @@ export function Navbar() {
             <div className="nav-dropdown-menu">
               <Link to="/services" className="dropdown-link view-all-link" onClick={closeMenu}>
                 <span className="dropdown-title">All Services Overview</span>
-                <span className="dropdown-desc">Explore all 6 strategic capabilities</span>
+                <span className="dropdown-desc">Explore all strategic capabilities</span>
               </Link>
               <div className="dropdown-divider" />
-              {servicesData.map((svc) => (
-                <Link
-                  key={svc.slug}
-                  to={`/services/${svc.slug}`}
-                  className={`dropdown-link ${location.pathname === `/services/${svc.slug}` ? 'dropdown-active' : ''}`}
-                  onClick={closeMenu}
-                >
-                  <span className="dropdown-title">{svc.title}</span>
-                </Link>
+              {navServicesHierarchy.map((item) => (
+                <div key={item.slug} className="dropdown-group">
+                  <div className="dropdown-item-header" style={{ display: 'flex', alignItems: 'center' }}>
+                    <Link
+                      to={`/services/${item.slug}`}
+                      className={`dropdown-link ${location.pathname === `/services/${item.slug}` ? 'dropdown-active' : ''}`}
+                      onClick={closeMenu}
+                      style={{ flex: 1 }}
+                    >
+                      <span className="dropdown-title">{item.title}</span>
+                    </Link>
+                    {item.children && item.children.length > 0 && (
+                      <button
+                        className="child-toggle-btn"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          e.stopPropagation();
+                          setExpandedMobileItem(expandedMobileItem === item.slug ? null : item.slug);
+                        }}
+                        style={{ padding: '12px 16px', background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', color: '#555' }}
+                        aria-label="Toggle submenu"
+                      >
+                        <ChevronDown size={14} className={`dropdown-chevron ${expandedMobileItem === item.slug ? 'rotate-180' : ''}`} style={{ transition: 'transform 0.3s' }} />
+                      </button>
+                    )}
+                  </div>
+                  {item.children && item.children.length > 0 && (
+                    <div className={`dropdown-children ${expandedMobileItem === item.slug ? 'expanded' : ''}`}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.slug}
+                          to={`/services/${child.slug}`}
+                          className={`dropdown-link dropdown-child-link ${location.pathname === `/services/${child.slug}` ? 'dropdown-active' : ''}`}
+                          onClick={closeMenu}
+                        >
+                          <span className="dropdown-title">{child.title}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
             </div>
           </div>
