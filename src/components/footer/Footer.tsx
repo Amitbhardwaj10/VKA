@@ -57,18 +57,20 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="footer-bottom-bar section">
-        <div className="footer-copyright" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px' }}>
-          <span>© {new Date().getFullYear()} VKA Capital Bridge. All rights reserved.</span>
-          <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
-            Made with <span style={{ color: '#e74c3c', fontSize: '14px' }}>❤️</span> by 
-            <a href="https://nitgrid.nitstack.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a050', fontWeight: '600', textDecoration: 'none', letterSpacing: '0.5px' }}>NitStack</a>
+      <div className="footer-bottom-bar section" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center' }}>
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+          <span className="footer-copyright" style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: '6px', margin: 0, padding: 0 }}>
+            <span>© {new Date().getFullYear()} VKA Capital Bridge. All rights reserved.</span>
+            <span style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+              <span className="mobile-hide" style={{ opacity: 0.5 }}>|</span> Made with <span style={{ color: '#e74c3c', fontSize: '14px' }}>❤️</span> by 
+              <a href="https://nitgrid.nitstack.com/" target="_blank" rel="noopener noreferrer" style={{ color: '#c9a050', fontWeight: '600', textDecoration: 'none', letterSpacing: '0.5px' }}>NitStack</a>
+            </span>
           </span>
-        </div>
-        <div className="footer-legal-links">
-          <a href="/#contact">Privacy Policy</a>
-          <span>|</span>
-          <a href="/#contact">Terms & Conditions</a>
+          <div className="footer-legal-links" style={{ display: 'flex', gap: '10px', alignItems: 'center', margin: 0, padding: 0 }}>
+            <a href="/#contact">Privacy Policy</a>
+            <span>|</span>
+            <a href="/#contact">Terms & Conditions</a>
+          </div>
         </div>
       </div>
 
