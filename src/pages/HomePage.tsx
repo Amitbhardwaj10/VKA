@@ -59,6 +59,26 @@ export function HomePage() {
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="eyebrow">
                 <span /> VKA CAPITAL BRIDGE
               </motion.div>
+
+              {/* Mobile Hero Visual: Appears directly after VKA CAPITAL BRIDGE and before heading */}
+              <div className="hero-visual-mobile">
+                <div className="hero-visual">
+                  <div className="hero-image hero-dubai" />
+                  <div className="hero-image hero-infra" />
+                  <div className="visual-label label-dubai">
+                    DUBAI <span>GLOBAL REAL ESTATE</span>
+                  </div>
+                  <div className="visual-label label-india">
+                    INDIA <span>INFRASTRUCTURE</span>
+                  </div>
+                  <div className="bridge-line">
+                    <i />
+                    <span>CAPITAL BRIDGE</span>
+                    <i />
+                  </div>
+                </div>
+              </div>
+
               <h1>
                 <SplitTextReveal>
                   Building the bridge<br />
@@ -79,21 +99,24 @@ export function HomePage() {
               </motion.div>
             </motion.div>
 
-            <motion.div className="hero-visual" style={{ y: heroY }}>
-              <div className="hero-image hero-dubai" />
-              <div className="hero-image hero-infra" />
-              <div className="visual-label label-dubai">
-                DUBAI <span>GLOBAL REAL ESTATE</span>
-              </div>
-              <div className="visual-label label-india">
-                INDIA <span>INFRASTRUCTURE</span>
-              </div>
-              <div className="bridge-line">
-                <i />
-                <span>CAPITAL BRIDGE</span>
-                <i />
-              </div>
-            </motion.div>
+            {/* Desktop Hero Visual */}
+            <div className="hero-visual-desktop">
+              <motion.div className="hero-visual" style={{ y: heroY }}>
+                <div className="hero-image hero-dubai" />
+                <div className="hero-image hero-infra" />
+                <div className="visual-label label-dubai">
+                  DUBAI <span>GLOBAL REAL ESTATE</span>
+                </div>
+                <div className="visual-label label-india">
+                  INDIA <span>INFRASTRUCTURE</span>
+                </div>
+                <div className="bridge-line">
+                  <i />
+                  <span>CAPITAL BRIDGE</span>
+                  <i />
+                </div>
+              </motion.div>
+            </div>
           </div>
 
           <div className="hero-meta">
