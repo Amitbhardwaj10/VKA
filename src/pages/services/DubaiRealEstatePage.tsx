@@ -27,7 +27,7 @@ export function DubaiRealEstatePage() {
 
       <main className="service-detail-main">
         {/* Dark Hero Section with Background Image */}
-        <section className="services-hero-section" style={{ minHeight: '60vh', display: 'flex', alignItems: 'center' }}>
+        <section className="services-hero-section" style={{ minHeight: '55vh', display: 'flex', alignItems: 'flex-start', paddingTop: '120px' }}>
           <div className="services-hero-bg" style={{ backgroundImage: `url('${service.heroImage}')`, filter: 'brightness(0.55)' }} />
           <div className="services-hero-overlay" style={{ background: 'linear-gradient(to right, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 100%)' }} />
           <div className="section services-hero-container" style={{ position: 'relative', zIndex: 3 }}>
@@ -37,16 +37,10 @@ export function DubaiRealEstatePage() {
               animate="visible"
               variants={fadeUp}
             >
-              <div className="section-label-gold">
-                <span className="dash-line" />
-                <span className="label-text" style={{ color: '#c9a050' }}>
-                  DUBAI CAPITAL BRIDGE
-                </span>
-              </div>
 
               <h1 className="services-hero-headline" style={{ color: '#ffffff' }}>
                 <SplitTextReveal>
-                  Dubai Real Estate <span className="text-accent-blue">Capital Bridge</span>
+                  Dubai Investment Real Estate <span className="text-accent-blue">Capital Bridge</span>
                 </SplitTextReveal>
               </h1>
 

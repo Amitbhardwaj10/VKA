@@ -40,7 +40,7 @@ export function UsAccountingPage() {
               <div className="section-label-gold">
                 <span className="dash-line" />
                 <span className="label-text" style={{ color: '#c9a050' }}>
-                  U.S. ACCOUNTING, TAX & COMPLIANCE
+                  U.S. ACCOUNTING & COMPLIANCE
                 </span>
               </div>
 
@@ -284,11 +284,8 @@ export function UsAccountingPage() {
             <Link to="/services/us-investment-hedge-accounting" className="related-service-link">
               U.S. Investment Hedge Accounting <ArrowUpRight size={14} />
             </Link>
-            <Link to="/services/international-taxation" className="related-service-link">
-              International Taxation <ArrowUpRight size={14} />
-            </Link>
             <Link to="/services/us-accounting-tax-compliance-advisory" className="related-service-link">
-              U.S. Accounting, Tax & Compliance Advisory <ArrowUpRight size={14} />
+              U.S. Accounting & Compliance Advisory <ArrowUpRight size={14} />
             </Link>
           </div>
         </section>

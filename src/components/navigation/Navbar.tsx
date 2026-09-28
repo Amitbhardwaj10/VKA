@@ -54,7 +54,7 @@ const SERVICES_CONFIG: ServiceMeta[] = [
   },
   {
     slug: 'us-accounting-tax-compliance-advisory',
-    title: 'U.S. Accounting, Tax & Compliance Advisory',
+    title: 'U.S. Accounting & Compliance Advisory',
     shortTitle: 'U.S. Accounting & Compliance',
     badge: 'Cross-Border Finance',
     tagline: 'Navigate regulations. Ensure growth.',
@@ -62,20 +62,21 @@ const SERVICES_CONFIG: ServiceMeta[] = [
     path: '/services/us-accounting-tax-compliance-advisory',
     children: [
       { title: 'U.S. Investment Hedge Accounting', path: '/services/us-investment-hedge-accounting' },
-      { title: 'International Taxation', path: '/services/international-taxation' },
       { title: 'U.S. Accounting & Compliance', path: '/services/us-accounting-compliance' }
     ]
   },
   {
-    slug: 'real-estate-investment',
-    title: 'Real Estate Investment',
-    shortTitle: 'Real Estate',
+    slug: 'dubai-real-estate-capital-bridge',
+    title: 'Dubai Investment Real Estate Capital Bridge',
+    shortTitle: 'Dubai Investment Real Estate',
     badge: 'Global Capital',
-    tagline: 'Institutional property syndication and cross-border capital bridge solutions.',
+    tagline: 'Exclusive tier-one master developer access and high-yield asset structuring.',
     icon: Building,
-    path: '/services/real-estate-investment',
+    path: '/services/dubai-real-estate-capital-bridge',
     children: [
-      { title: 'Dubai Real Estate Capital Bridge', path: '/services/dubai-real-estate-capital-bridge' }
+      { title: 'Direct Developer Access', path: '/services/dubai-real-estate-capital-bridge#capabilities' },
+      { title: 'Investment Underwriting', path: '/services/dubai-real-estate-capital-bridge#capabilities' },
+      { title: 'Golden Visa & Structuring', path: '/services/dubai-real-estate-capital-bridge#capabilities' }
     ]
   },
   {
@@ -255,20 +256,10 @@ export function Navbar() {
                   })}
                 </div>
 
-                {/* Right Column: Featured Submenu (Strictly NO IMAGES as requested) */}
-                <div className="mega-right-col">
-                  {/* Luxury Gradient Card */}
-                  <div className="mega-featured-card">
-                    <div className="mega-card-badge">
-                      <span className="badge-dot" />
-                      {hoveredService.badge}
-                    </div>
-                    <h4 className="mega-card-title">{hoveredService.shortTitle || hoveredService.title}</h4>
-                    <p className="mega-card-desc">{hoveredService.tagline}</p>
-                  </div>
-
-                  {/* Sub-Services Links with Arrow (Only for services with sub-menus) */}
-                  {hoveredService.children && hoveredService.children.length > 0 && (
+                {/* Right Column: Sub-Services Links */}
+                {hoveredService.children && hoveredService.children.length > 0 && (
+                  <div className="mega-right-col">
+                    <span className="mega-sub-col-label">Sub-services</span>
                     <div className="mega-subservices-list">
                       {hoveredService.children.map((sub, index) => (
                         <Link
@@ -282,8 +273,8 @@ export function Navbar() {
                         </Link>
                       ))}
                     </div>
-                  )}
-                </div>
+                  </div>
+                )}
               </div>
             </li>
 

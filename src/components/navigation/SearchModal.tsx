@@ -70,11 +70,11 @@ const SEARCH_DATABASE: SearchItem[] = [
   },
   {
     id: 'us-accounting-tax',
-    title: 'U.S. Accounting, Tax & Compliance Advisory',
+    title: 'U.S. Accounting & Compliance Advisory',
     category: 'Service',
     url: '/services/us-accounting-tax-compliance-advisory',
     description: 'Navigate complex IRS frameworks, GAAP standards, and cross-border structuring.',
-    keywords: ['us', 'accounting', 'tax', 'compliance', 'irs', 'gaap', 'cross border']
+    keywords: ['us', 'accounting', 'compliance', 'irs', 'gaap', 'cross border']
   },
   {
     id: 'us-accounting-compliance',
@@ -93,25 +93,9 @@ const SEARCH_DATABASE: SearchItem[] = [
     keywords: ['hedge', 'investment', 'derivatives', 'hedging', 'risk mitigation', 'asc 815']
   },
   {
-    id: 'international-tax',
-    title: 'International Taxation',
-    category: 'Sub-Service',
-    url: '/services/international-taxation',
-    description: 'Cross-border treaty analysis, transfer pricing, and dual-jurisdiction tax efficiency.',
-    keywords: ['tax', 'taxation', 'international', 'treaty', 'cross border', 'transfer pricing']
-  },
-  {
-    id: 'real-estate',
-    title: 'Real Estate Investment',
-    category: 'Service',
-    url: '/services/real-estate-investment',
-    description: 'Institutional real estate syndication, prime acquisitions, and capital bridges.',
-    keywords: ['real estate', 'property', 'investment', 'commercial', 'syndication']
-  },
-  {
     id: 'dubai-real-estate',
     title: 'Dubai Real Estate Capital Bridge',
-    category: 'Sub-Service',
+    category: 'Service',
     url: '/services/dubai-real-estate-capital-bridge',
     description: 'Premium UAE and Dubai real estate structuring, Golden Visa, and high-yield assets.',
     keywords: ['dubai', 'uae', 'real estate', 'gulf', 'property', 'golden visa', 'capital bridge']

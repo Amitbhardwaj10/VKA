@@ -200,7 +200,7 @@ h4 em,
 .hero {
   min-height: 880px;
   min-height: 100vh;
-  padding: 180px 5% 80px;
+  padding: 120px 5% 80px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,6 +218,25 @@ h4 em,
 .hero-copy {
   position: relative;
   z-index: 3;
+  transform: translateY(-40px);
+}
+.hero-copy .eyebrow {
+  font-size: 17px;
+}
+.hero-founder {
+  font-size: 14px;
+  font-weight: 500;
+  color: #65645f;
+  letter-spacing: 0.04em;
+  margin-top: 10px;
+  margin-bottom: 2px;
+}
+.hero-founder-sub {
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #9a9890;
+  letter-spacing: 0.02em;
+  margin-bottom: 4px;
 }
 .eyebrow,
 .section-no {
@@ -1080,6 +1099,7 @@ footer {
   .hero-copy {
     width: 100%;
     max-width: 100%;
+    transform: none;
   }
   .hero-visual-desktop {
     display: none !important;
@@ -3119,6 +3139,80 @@ footer {
   background: #0076e2;
 }
 
+/* --- ABOUT ADVISORY PRACTICE ROLES --- */
+.about-roles-section {
+  padding: 85px 0 95px;
+  background: #f8fafc;
+  border-top: 1px solid #f0f1f5;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.about-roles-header {
+  margin-bottom: 45px;
+}
+
+.about-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.about-role-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  padding: 36px 30px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 20px rgba(11, 45, 79, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.about-role-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(11, 45, 79, 0.08);
+  border-color: rgba(26, 111, 181, 0.25);
+}
+
+.role-card-number {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1a6fb5;
+  letter-spacing: 0.12em;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.role-card-title {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 23px;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #0a1118;
+  margin: 0 0 14px;
+}
+
+.role-card-areas {
+  font-size: 14px;
+  line-height: 1.65;
+  color: #525d6d;
+  margin: 0;
+}
+
+.role-card-areas strong {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .about-roles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}
+
 /* --- 3. OUR IMPACT / STATISTICS BAND --- */
 .about-impact-section {
   position: relative;
@@ -4016,7 +4110,7 @@ footer {
 .ct-detail-block {
   display: flex;
   gap: 18px;
-  margin-bottom: 35px;
+  margin-bottom: 22px;
   align-items: flex-start;
 }
 .ct-detail-icon {
@@ -4208,7 +4302,7 @@ footer {
 
 /* — LOCATION STRIP — */
 .ct-strip {
-  padding: 70px 0;
+  padding: 70px 5%;
   border-top: 1px solid rgba(0,0,0,0.08);
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }

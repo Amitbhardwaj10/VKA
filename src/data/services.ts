@@ -431,13 +431,13 @@ export const servicesData: ServiceData[] = [
   {
     slug: 'us-accounting-tax-compliance-advisory',
     number: '04',
-    title: 'U.S. Accounting, Tax & Compliance Advisory',
-    shortTitle: 'U.S. Accounting & Tax',
+    title: 'U.S. Accounting & Compliance Advisory',
+    shortTitle: 'U.S. Accounting & Compliance',
     heroHighlightWord: 'Advisory',
     category: 'Cross-Border Structuring',
-    kicker: 'U.S. Accounting, Tax & Compliance',
-    tag: 'GAAP ┬╖ Hedge ┬╖ Tax',
-    description: 'Accurate financial reporting, correctly documented hedges, and cross-border tax structuring — for U.S. entities and multinational groups operating in the U.S. Three disciplines, handled as one coordinated practice, because they rarely stay separate in real financial statements.',
+    kicker: 'U.S. Accounting & Compliance',
+    tag: 'GAAP · Hedge',
+    description: 'Accurate financial reporting and correctly documented hedges for U.S. entities and multinational groups operating in the U.S. Handled as one coordinated practice, because they rarely stay separate in real financial statements.',
     cardImage: imgInternationalTax,
     heroImage: imgInternationalTax,
     overviewImage: '/images/services/international-taxation.jpg',
@@ -454,32 +454,26 @@ export const servicesData: ServiceData[] = [
         description: "Companies use financial contracts to protect themselves against price swings. Hedge accounting under ASC 815 is the technical discipline of documenting and testing these hedges so financial statements reflect the underlying economics rather than unnecessary accounting volatility.",
         route: '/services/us-investment-hedge-accounting',
         slug: 'us-investment-hedge-accounting'
-      },
-      {
-        title: 'International Taxation',
-        description: "A company operating across multiple countries can face overlapping tax obligations. We focus on areas such as tax treaties, transfer pricing and applicable international tax rules to help structure cross-border operations and compliance appropriately.",
-        route: '/services/international-taxation',
-        slug: 'international-taxation'
       }
     ],
     overview: {
       heading: 'Coordinated execution.',
       subheading: 'Technical precision.',
-      lead: 'Financial reporting, hedge documentation, and international tax structuring are deeply intertwined. A decision in one area cascades into the others.',
+      lead: 'Financial reporting and hedge documentation are deeply intertwined. A decision in one area cascades into the other.',
       paragraphs: [
-        'We manage these three disciplines as a unified practice. Our approach ensures that your U.S. GAAP compliance, derivative risk management, and cross-border tax strategies work together seamlessly, rather than creating conflicting objectives or unexpected liabilities.'
+        'We manage these disciplines as a unified practice. Our approach ensures that your U.S. GAAP compliance and derivative risk management work together seamlessly, rather than creating conflicting objectives or unexpected liabilities.'
       ]
     },
     capabilities: [
       {
         number: '01',
         title: 'Integrated Financial Reporting',
-        description: 'Synchronized delivery of U.S. GAAP statements, ASC 815 disclosures, and tax provision calculations.'
+        description: 'Synchronized delivery of U.S. GAAP statements and ASC 815 disclosures.'
       },
       {
         number: '02',
         title: 'Cross-Border Harmonization',
-        description: 'Aligning international parent-company reporting with distinct U.S. regulatory and tax requirements.'
+        description: 'Aligning international parent-company reporting with distinct U.S. regulatory requirements.'
       },
       {
         number: '03',
@@ -495,7 +489,7 @@ export const servicesData: ServiceData[] = [
         {
           number: '01',
           title: 'Align',
-          description: 'Assess the combined impact of accounting policies, hedge structures, and tax positions.'
+          description: 'Assess the combined impact of accounting policies and hedge structures.'
         },
         {
           number: '02',
@@ -512,29 +506,29 @@ export const servicesData: ServiceData[] = [
     situations: [
       {
         title: 'Holistic Market Entry',
-        description: 'Foreign multinationals establishing U.S. operations requiring simultaneous GAAP compliance, tax structuring, and FX risk management.'
+        description: 'Foreign multinationals establishing U.S. operations requiring simultaneous GAAP compliance and FX risk management.'
       }
     ],
     crossBorder: {
       heading: 'Bridging standards.',
       subheading: 'Unified compliance.',
       lead: 'U.S. financial regulations are uniquely demanding and strictly enforced.',
-      paragraph: 'We ensure that international groups can operate within the U.S. market with total confidence, knowing their accounting, hedging, and tax positions are technically sound and fully integrated.'
+      paragraph: 'We ensure that international groups can operate within the U.S. market with total confidence, knowing their accounting and hedging positions are technically sound and fully integrated.'
     },
     whyVka: {
       heading: 'One practice. Total clarity.',
       subheading: 'WHY VKA',
-      lead: 'By unifying these three disciplines, we deliver faster execution and eliminate contradictory advice.',
-      paragraph: 'Our team possesses the technical depth to handle complex standalone ASC 815 or transfer pricing issues, combined with the strategic breadth to see how they impact your broader U.S. compliance posture.',
+      lead: 'By unifying these disciplines, we deliver faster execution and eliminate contradictory advice.',
+      paragraph: 'Our team possesses the technical depth to handle complex standalone ASC 815 issues, combined with the strategic breadth to see how they impact your broader U.S. compliance posture.',
       points: [
         'Integrated multi-disciplinary advisory',
-        'Deep U.S. GAAP, ASC 815, and International Tax expertise',
+        'Deep U.S. GAAP and ASC 815 expertise',
         'Streamlined audit defense and coordination'
       ]
     },
     cta: {
       heading: 'Unify your U.S. compliance strategy.',
-      description: 'Speak with our team to discuss how our integrated accounting, tax, and compliance services can protect your enterprise.',
+      description: 'Speak with our team to discuss how our integrated accounting and compliance services can protect your enterprise.',
       buttonText: 'Start a conversation'
     },
     prev: {
@@ -542,144 +536,115 @@ export const servicesData: ServiceData[] = [
       title: 'Surety Bonds & BG Advisory'
     },
     next: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
+      slug: 'dubai-real-estate-capital-bridge',
+      title: 'Dubai Investment Real Estate Capital Bridge'
     },
     seo: {
-      title: 'U.S. Accounting, Tax & Compliance Advisory | VKA Capital Bridge',
-      description: 'Integrated U.S. GAAP reporting, ASC 815 hedge accounting, and international tax structuring.'
+      title: 'U.S. Accounting & Compliance Advisory | VKA Capital Bridge',
+      description: 'Integrated U.S. GAAP reporting and ASC 815 hedge accounting.'
     }
   },
   {
-    slug: 'real-estate-investment',
+    slug: 'dubai-real-estate-capital-bridge',
     number: '05',
-    title: 'Real Estate Investment',
-    shortTitle: 'Real Estate',
-    heroHighlightWord: 'Investment',
-    category: 'Capital Structuring & Assets',
-    kicker: 'Capital Structuring & Assets',
-    tag: 'Cross-Border ┬╖ Due Diligence',
-    description:
-      'Acquisition due diligence, capital structuring and portfolio strategy across commercial and residential assets, including cross-border investment structuring.',
+    title: 'Dubai Investment Real Estate Capital Bridge',
+    shortTitle: 'Dubai Investment Real Estate',
+    heroHighlightWord: 'Dubai',
+    category: 'Real Estate Investment',
+    kicker: 'Global Asset Allocation',
+    tag: 'Dubai · Premium Assets',
+    description: "Exclusive access to Dubai's tier-one master developers and high-yield real estate assets, structured for international investors seeking capital appreciation, secure rental yields, and jurisdictional diversification.",
     cardImage: imgRealEstate,
     heroImage: imgRealEstate,
     overviewImage: '/images/services/real-estate-investment.jpg',
     perspectiveImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85',
     overview: {
-      heading: 'Real assets.',
-      subheading: 'Disciplined capital.',
-      lead: 'Direct real estate investment demands rigorous financial underwriting and sound jurisdictional structuring.',
+      heading: 'Gateway to global assets.',
+      subheading: 'Unmatched structural advantages.',
+      lead: "Dubai has transitioned from a regional hub into a primary destination for global capital preservation and yield generation.",
       paragraphs: [
-        'We advise high-net-worth investors, family offices, and developers on acquisition due diligence, capital stack structuring, and cross-border asset holding strategies.',
-        'From high-yield commercial assets in emerging financial centers to prime residential portfolios, we focus on fundamental asset quality, lease covenant strength, and clear exit mechanisms rather than speculative market hype.'
+        'Through our direct relationships with tier-one master developers in the UAE, we bypass traditional broker networks to secure premium inventory for our clients before it reaches the retail market.',
+        'We guide investors through the entire acquisition lifecycle—from initial asset selection and financial underwriting to structural closing and long-term property management.'
       ]
     },
     capabilities: [
       {
         number: '01',
-        title: 'Acquisition Due Diligence',
-        description: 'Comprehensive financial, technical, and title validation to verify asset valuation and cash flow viability.'
+        title: 'Direct Developer Access',
+        description: 'Priority allocations and VIP inventory access with top-tier Dubai master developers.'
       },
       {
         number: '02',
-        title: 'Capital Stack Structuring',
-        description: 'Optimizing senior debt, mezzanine finance, and equity participation to lower blended capital costs.'
+        title: 'Investment Underwriting',
+        description: 'Rigorous financial analysis of projected capital appreciation and net rental yields.'
       },
       {
         number: '03',
-        title: 'Portfolio Strategy',
-        description: 'Strategic allocation across asset classes, geographical submarkets, and yield-generation profiles.'
-      },
-      {
-        number: '04',
-        title: 'Cross-Border Asset Holding',
-        description: 'Structuring SPVs, trust entities, and tax-efficient vehicles for international real estate acquisitions.'
-      },
-      {
-        number: '05',
-        title: 'Developer Direct Interface',
-        description: 'Facilitating direct, un-intermediated relationships with premier tier-one master developers.'
-      },
-      {
-        number: '06',
-        title: 'Lease & Covenant Analysis',
-        description: 'Review of tenant solvency, rent escalation clauses, and long-term operating net cash flow predictability.'
+        title: 'Golden Visa & Structuring',
+        description: 'Facilitating investor residency programs and optimal corporate holding structures.'
       }
     ],
     approach: {
       heading: 'Our Approach',
-      subheading: 'Analytical. Objective. Unaligned.',
-      lead: 'We do not sell properties; we advise on capital deployment and underwriting integrity.',
+      subheading: 'Selective. Strategic. Secure.',
+      lead: 'We treat real estate acquisition as a serious capital allocation exercise, not a speculative purchase.',
       steps: [
         {
           number: '01',
-          title: 'Underwrite',
-          description: 'Evaluate physical asset condition, location fundamentals, historical yields, and rent roll reliability.'
+          title: 'Source',
+          description: 'Identify premium off-plan and secondary market assets aligned with your yield requirements.'
         },
         {
           number: '02',
           title: 'Structure',
-          description: 'Design holding entities, tax treaty routing, and debt capitalization tailored to investor objectives.'
+          description: 'Navigate escrow payments, DLD registration, and secure transactional frameworks.'
         },
         {
           number: '03',
-          title: 'Execute',
-          description: 'Oversee contractual closing, escrow protocols, and transition into operational asset management.'
+          title: 'Manage',
+          description: 'Provide end-to-end post-handover management to ensure consistent cash flow realization.'
         }
       ]
     },
     situations: [
       {
-        title: 'Global Wealth Asset Diversification',
-        description: 'Family offices acquiring prime commercial real estate in global financial gateways to hedge domestic risk.'
-      },
-      {
-        title: 'Developer Joint Venture Structuring',
-        description: 'Landowners and equity partners establishing clear equity-sharing, development milestones, and waterfall returns.'
-      },
-      {
-        title: 'Cross-Border Residential Portfolios',
-        description: 'HNIs navigating foreign exchange regulations and residency-linked property investments in premier jurisdictions.'
+        title: 'Capital Flight & Diversification',
+        description: "High-net-worth families reallocating capital from volatile jurisdictions into Dubai's secure, tax-efficient real estate market."
       }
     ],
     crossBorder: {
-      heading: 'International real asset flows.',
-      subheading: 'Sovereign clarity.',
-      lead: 'Property acquisition across jurisdictions involves distinct legal traditions, registration fees, and tax implications.',
-      paragraph:
-        'We help investors navigate currency repatriation protocols, local zoning laws, and municipal ownership restrictions to ensure real estate investments remain liquid and legally protected.'
+      heading: 'A tax-efficient safe haven.',
+      subheading: 'Global liquidity.',
+      lead: 'Dubai offers zero capital gains tax and no property taxes, creating an unparalleled environment for asset growth.',
+      paragraph: 'We ensure international investors can efficiently deploy capital into the UAE while maintaining full compliance with their home country reporting requirements.'
     },
     whyVka: {
-      heading: 'Fiduciary posture. Institutional rigor.',
+      heading: 'Institutional access. Fiduciary care.',
       subheading: 'WHY VKA',
-      lead: 'We maintain complete independence from broker sales quotas and transaction commissions.',
-      paragraph:
-        'Our sole objective is ensuring your capital is deployed into fundamentally sound real assets, protected by robust legal structuring and conservative financial modeling.',
+      lead: 'We are not real estate agents; we are capital advisors managing your global asset exposure.',
+      paragraph: 'Our Capital Bridge provides a direct, un-intermediated conduit to Dubai’s most lucrative real estate opportunities, backed by our rigorous financial diligence.',
       points: [
-        'Strictly advisory-first, non-broker model',
-        'Direct access to institutional development partners',
-        'In-depth cross-border tax and SPV structuring capability',
-        'End-to-end transaction due diligence oversight'
+        'Zero-commission, fiduciary-first advisory model',
+        'Direct relationships with government-backed developers',
+        'End-to-end transaction and residency facilitation'
       ]
     },
     cta: {
-      heading: 'Evaluate your real estate capital strategy.',
-      description:
-        'Contact our real estate investment advisory group to discuss prospective acquisitions or portfolio restructuring.',
+      heading: 'Diversify into global real estate.',
+      description: 'Speak with our Dubai investment desk to explore current premium allocations and structural requirements.',
       buttonText: 'Start a conversation'
     },
     prev: {
       slug: 'us-accounting-tax-compliance-advisory',
-      title: 'U.S. Accounting, Tax & Compliance Advisory'
+      title: 'U.S. Accounting & Compliance Advisory'
     },
     next: {
       slug: 'advisory-management-consultancy',
       title: 'Advisory & Management Consultancy'
     },
     seo: {
-      title: 'Real Estate Investment Advisory | VKA Capital Bridge',
-      description:
-        'Real estate acquisition due diligence, capital structuring, and portfolio strategy across prime commercial and residential assets.'
+      title: 'Dubai Real Estate Capital Bridge | VKA Capital Bridge',
+      description: 'Exclusive access to tier-one Dubai real estate investments, offering capital appreciation, high yields, and tax efficiency.'
     }
   },
   {
@@ -801,8 +766,8 @@ export const servicesData: ServiceData[] = [
       buttonText: 'Start a conversation'
     },
     prev: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
+      slug: 'dubai-real-estate-capital-bridge',
+      title: 'Dubai Real Estate Capital Bridge'
     },
     next: {
       slug: 'insurance-risk-management',
@@ -818,109 +783,6 @@ export const servicesData: ServiceData[] = [
 
 export const subServicesData: ServiceData[] = [
   {
-    slug: 'dubai-real-estate-capital-bridge',
-    number: '01',
-    title: 'Dubai Real Estate Capital Bridge',
-    shortTitle: 'Dubai Real Estate',
-    heroHighlightWord: 'Dubai',
-    category: 'Real Estate Investment',
-    kicker: 'Global Asset Allocation',
-    tag: 'Dubai · Premium Assets',
-    description: "Exclusive access to Dubai's tier-one master developers and high-yield real estate assets, structured for international investors seeking capital appreciation, secure rental yields, and jurisdictional diversification.",
-    cardImage: '/images/services/real-estate-investment.jpg',
-    heroImage: '/images/services/real-estate-investment.jpg',
-    overviewImage: '/images/services/real-estate-investment.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Gateway to global assets.',
-      subheading: 'Unmatched structural advantages.',
-      lead: "Dubai has transitioned from a regional hub into a primary destination for global capital preservation and yield generation.",
-      paragraphs: [
-        'Through our direct relationships with tier-one master developers in the UAE, we bypass traditional broker networks to secure premium inventory for our clients before it reaches the retail market.',
-        'We guide investors through the entire acquisition lifecycle—from initial asset selection and financial underwriting to structural closing and long-term property management.'
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Direct Developer Access',
-        description: 'Priority allocations and VIP inventory access with top-tier Dubai master developers.'
-      },
-      {
-        number: '02',
-        title: 'Investment Underwriting',
-        description: 'Rigorous financial analysis of projected capital appreciation and net rental yields.'
-      },
-      {
-        number: '03',
-        title: 'Golden Visa & Structuring',
-        description: 'Facilitating investor residency programs and optimal corporate holding structures.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Selective. Strategic. Secure.',
-      lead: 'We treat real estate acquisition as a serious capital allocation exercise, not a speculative purchase.',
-      steps: [
-        {
-          number: '01',
-          title: 'Source',
-          description: 'Identify premium off-plan and secondary market assets aligned with your yield requirements.'
-        },
-        {
-          number: '02',
-          title: 'Structure',
-          description: 'Navigate escrow payments, DLD registration, and secure transactional frameworks.'
-        },
-        {
-          number: '03',
-          title: 'Manage',
-          description: 'Provide end-to-end post-handover management to ensure consistent cash flow realization.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'Capital Flight & Diversification',
-        description: "High-net-worth families reallocating capital from volatile jurisdictions into Dubai's secure, tax-efficient real estate market."
-      }
-    ],
-    crossBorder: {
-      heading: 'A tax-efficient safe haven.',
-      subheading: 'Global liquidity.',
-      lead: 'Dubai offers zero capital gains tax and no property taxes, creating an unparalleled environment for asset growth.',
-      paragraph: 'We ensure international investors can efficiently deploy capital into the UAE while maintaining full compliance with their home country reporting requirements.'
-    },
-    whyVka: {
-      heading: 'Institutional access. Fiduciary care.',
-      subheading: 'WHY VKA',
-      lead: 'We are not real estate agents; we are capital advisors managing your global asset exposure.',
-      paragraph: 'Our Capital Bridge provides a direct, un-intermediated conduit to Dubai’s most lucrative real estate opportunities, backed by our rigorous financial diligence.',
-      points: [
-        'Zero-commission, fiduciary-first advisory model',
-        'Direct relationships with government-backed developers',
-        'End-to-end transaction and residency facilitation'
-      ]
-    },
-    cta: {
-      heading: 'Diversify into global real estate.',
-      description: 'Speak with our Dubai investment desk to explore current premium allocations and structural requirements.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
-    },
-    next: {
-      slug: 'advisory-management-consultancy',
-      title: 'Advisory & Management Consultancy'
-    },
-    seo: {
-      title: 'Dubai Real Estate Capital Bridge | VKA Capital Bridge',
-      description: 'Exclusive access to tier-one Dubai real estate investments, offering capital appreciation, high yields, and tax efficiency.'
-    }
-  },
-  {
     slug: 'us-accounting-compliance',
     number: '01',
     title: 'U.S. Accounting & Compliance',
@@ -928,7 +790,7 @@ export const subServicesData: ServiceData[] = [
     heroHighlightWord: 'Compliance',
     category: 'GAAP & Regulatory Governance',
     kicker: 'U.S. GAAP & Governance',
-    tag: 'U.S. GAAP ┬╖ Audit Readiness',
+    tag: 'U.S. GAAP · Audit Readiness',
     description: "We keep a company's financial records accurate, aligned with U.S. GAAP, and structured so they hold up under scrutiny — whether that scrutiny comes from an auditor, a regulator, a lender, or a prospective investor. This covers financial statement preparation, internal controls design, and building a compliance calendar so nothing — a filing deadline, a disclosure requirement — gets missed.",
     cardImage: '/images/services/us-accounting-compliance.jpg',
     heroImage: '/images/services/us-accounting-compliance.jpg',
@@ -1010,7 +872,7 @@ export const subServicesData: ServiceData[] = [
     },
     prev: {
       slug: 'us-accounting-tax-compliance-advisory',
-      title: 'U.S. Accounting, Tax & Compliance Advisory'
+      title: 'U.S. Accounting & Compliance Advisory'
     },
     next: {
       slug: 'us-investment-hedge-accounting',
@@ -1029,7 +891,7 @@ export const subServicesData: ServiceData[] = [
     heroHighlightWord: 'Accounting',
     category: 'ASC 815 & Derivative Risk',
     kicker: 'ASC 815 & Derivative Risk',
-    tag: 'ASC 815 ┬╖ FX & Derivatives',
+    tag: 'ASC 815 · FX & Derivatives',
     description: "Companies use financial contracts to protect themselves against price swings — locking in today's price for something they'll need later. Done right, this is smart risk management. Recorded wrong, it can make otherwise stable profits look artificially volatile on paper.",
     cardImage: imgHedgeAccounting,
     heroImage: imgHedgeAccounting,
@@ -1114,113 +976,12 @@ export const subServicesData: ServiceData[] = [
       title: 'U.S. Accounting & Compliance'
     },
     next: {
-      slug: 'international-taxation',
-      title: 'International Taxation'
+      slug: 'us-accounting-compliance',
+      title: 'U.S. Accounting & Compliance'
     },
     seo: {
       title: 'U.S. Investment Hedge Accounting (ASC 815) | VKA Capital Bridge',
       description: 'ASC 815 hedge accounting design, contemporaneous documentation, and effectiveness testing.'
-    }
-  },
-  {
-    slug: 'international-taxation',
-    number: '03',
-    title: 'International Taxation',
-    shortTitle: 'International Tax',
-    heroHighlightWord: 'Taxation',
-    category: 'Cross-Border Structuring & BEPS',
-    kicker: 'Cross-Border & BEPS Pillar Two',
-    tag: 'Transfer Pricing ┬╖ Tax Treaties',
-    description: "A company operating in more than one country risks paying tax twice on the same income — once where it's earned, again where the company is based. We structure operations to legally minimize that exposure, using tax treaties between countries, correct pricing for transactions between a company's own overseas divisions (transfer pricing), and compliance with newer global rules like the Pillar Two minimum tax.",
-    cardImage: imgInternationalTax,
-    heroImage: imgInternationalTax,
-    overviewImage: '/images/services/international-taxation.jpg',
-    perspectiveImage: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&w=1200&q=85',
-    overview: {
-      heading: 'Cross-border efficiency.',
-      subheading: 'Global compliance.',
-      lead: "A company operating in more than one country risks paying tax twice on the same income — once where it's earned, again where the company is based.",
-      paragraphs: [
-        "We structure operations to legally minimize that exposure, using tax treaties between countries, correct pricing for transactions between a company's own overseas divisions (transfer pricing), and compliance with newer global rules like the Pillar Two minimum tax."
-      ]
-    },
-    capabilities: [
-      {
-        number: '01',
-        title: 'Cross-Border Holding Structuring',
-        description: 'Design of holding company and capital repatriation corridors aligned with bilateral tax treaty benefits.'
-      },
-      {
-        number: '02',
-        title: 'Transfer Pricing Policy',
-        description: 'Formulation of defensible intercompany pricing, management fees, and intellectual property licensing models.'
-      },
-      {
-        number: '03',
-        title: 'BEPS & Pillar Two Readiness',
-        description: 'Assessment of Effective Tax Rates (ETR) and Top-Up tax exposures under OECD Pillar Two global minimum rules.'
-      }
-    ],
-    approach: {
-      heading: 'Our Approach',
-      subheading: 'Substantive. Compliant. Forward-Looking.',
-      lead: 'We prioritize operational substance and defensibility over fragile artificial tax engineering.',
-      steps: [
-        {
-          number: '01',
-          title: 'Map',
-          description: 'Analyze entity ownership hierarchies, cross-border revenue flows, and existing bilateral tax treaty reliance.'
-        },
-        {
-          number: '02',
-          title: 'Model',
-          description: 'Calculate effective tax rates, withholding friction points, and transfer pricing margins under current rules.'
-        },
-        {
-          number: '03',
-          title: 'Implement',
-          description: 'Establish intercompany agreements, economic substance policies, and local documentation protocols.'
-        }
-      ]
-    },
-    situations: [
-      {
-        title: 'In Practice',
-        description: "A U.S. software company opens a subsidiary in Germany to serve European clients directly. Without a clear transfer pricing policy, tax authorities in both countries could challenge how much profit is allocated to each entity — and both could try to tax the same income. We set a defensible pricing policy between the U.S. parent and German subsidiary, documented to satisfy both tax authorities, so the company pays what it owes once, correctly, in each jurisdiction."
-      }
-    ],
-    crossBorder: {
-      heading: 'Global tax architecture.',
-      subheading: 'Substance over form.',
-      lead: 'Tax authorities worldwide now share transaction data seamlessly under multilateral conventions.',
-      paragraph: 'Success requires establishing genuine economic substance, governance controls, and documentary evidence that support your tax positions in every jurisdiction where you operate.'
-    },
-    whyVka: {
-      heading: 'Commercial clarity. Treaty expertise.',
-      subheading: 'WHY VKA',
-      lead: 'We view tax as an integral component of overall capital efficiency and risk management.',
-      paragraph: 'Our advisory bridges commercial intent with statutory reality, helping corporate groups expand internationally without accumulating hidden tax liabilities or regulatory friction.',
-      points: [
-        'Deep bilateral treaty and withholding analysis',
-        'Pragmatic transfer pricing documentation frameworks'
-      ]
-    },
-    cta: {
-      heading: 'Structure your cross-border operations effectively.',
-      description: 'Speak with our international tax advisory team to evaluate your cross-border structures and treaty protections.',
-      buttonText: 'Start a conversation'
-    },
-    prev: {
-      slug: 'us-investment-hedge-accounting',
-      title: 'U.S. Investment Hedge Accounting'
-    },
-    next: {
-      slug: 'real-estate-investment',
-      title: 'Real Estate Investment'
-    },
-    seo: {
-      title: 'International Taxation & Cross-Border Structuring | VKA Capital Bridge',
-      description: 'Cross-border tax structuring, transfer pricing documentation, and treaty analysis.'
     }
   }
 ];
@@ -1254,7 +1015,7 @@ export const navServicesHierarchy: NavServiceItem[] = [
   },
   {
     slug: 'us-accounting-tax-compliance-advisory',
-    title: 'U.S. Accounting, Tax & Compliance Advisory',
+    title: 'U.S. Accounting & Compliance Advisory',
     children: [
       {
         slug: 'us-accounting-compliance',
@@ -1263,22 +1024,12 @@ export const navServicesHierarchy: NavServiceItem[] = [
       {
         slug: 'us-investment-hedge-accounting',
         title: 'U.S. Investment Hedge Accounting'
-      },
-      {
-        slug: 'international-taxation',
-        title: 'International Taxation'
       }
     ]
   },
   {
-    slug: 'real-estate-investment',
-    title: 'Real Estate Investment',
-    children: [
-      {
-        slug: 'dubai-real-estate-capital-bridge',
-        title: 'Dubai Real Estate Capital Bridge'
-      }
-    ]
+    slug: 'dubai-real-estate-capital-bridge',
+    title: 'Dubai Real Estate Capital Bridge'
   },
   {
     slug: 'advisory-management-consultancy',

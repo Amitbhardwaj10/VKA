@@ -40,18 +40,18 @@ export function UsAccountingTaxCompliancePage() {
               <div className="section-label-gold">
                 <span className="dash-line" />
                 <span className="label-text" style={{ color: '#c9a050' }}>
-                  U.S. ACCOUNTING, TAX & COMPLIANCE
+                  U.S. ACCOUNTING & COMPLIANCE
                 </span>
               </div>
 
               <h1 className="services-hero-headline" style={{ color: '#ffffff' }}>
                 <SplitTextReveal>
-                  U.S. Accounting, Tax & Compliance <span className="text-accent-blue">Advisory</span>
+                  U.S. Accounting & Compliance <span className="text-accent-blue">Advisory</span>
                 </SplitTextReveal>
               </h1>
 
               <p className="services-hero-lead" style={{ color: '#e0e0e0', maxWidth: '760px' }}>
-                Accurate financial reporting, correctly documented hedges, and cross-border tax structuring — for U.S. entities and multinational groups operating in the U.S. Three disciplines, handled as one coordinated practice, because they rarely stay separate in real financial statements.
+                Accurate financial reporting and correctly documented hedges for U.S. entities and multinational groups operating in the U.S. Handled as one coordinated practice, because they rarely stay separate in real financial statements.
               </p>
             </motion.div>
           </div>
@@ -146,7 +146,7 @@ export function UsAccountingTaxCompliancePage() {
             <div className="sub-services-header">
               <div className="section-label-gold">
                 <span className="dash-line" />
-                <span className="label-text">THREE DISCIPLINES</span>
+                <span className="label-text">CORE DISCIPLINES</span>
               </div>
               <h2 className="sub-services-headline">
                 <SplitTextReveal>

@@ -10,8 +10,6 @@ import { SuretyBondsPage } from './pages/services/SuretyBondsPage'
 import { UsAccountingTaxCompliancePage } from './pages/services/UsAccountingTaxCompliancePage'
 import { UsAccountingPage } from './pages/services/UsAccountingPage'
 import { HedgeAccountingPage } from './pages/services/HedgeAccountingPage'
-import { InternationalTaxPage } from './pages/services/InternationalTaxPage'
-import { RealEstatePage } from './pages/services/RealEstatePage'
 import { DubaiRealEstatePage } from './pages/services/DubaiRealEstatePage'
 import { ManagementConsultancyPage } from './pages/services/ManagementConsultancyPage'
 import { WhyVKAPage } from './pages/WhyVKAPage'
@@ -33,16 +31,12 @@ export function App() {
         <Route path="/services/infrastructure-advisory" element={<InfrastructureAdvisoryPage />} />
         <Route path="/services/surety-bonds-bg-advisory" element={<SuretyBondsPage />} />
         <Route path="/services/us-accounting-tax-compliance-advisory" element={<UsAccountingTaxCompliancePage />} />
-        <Route path="/services/real-estate-investment" element={<RealEstatePage />} />
+        <Route path="/services/dubai-real-estate-capital-bridge" element={<DubaiRealEstatePage />} />
         <Route path="/services/advisory-management-consultancy" element={<ManagementConsultancyPage />} />
 
-        {/* Sub-Service Pages under U.S. Accounting, Tax & Compliance */}
+        {/* Sub-Service Pages under U.S. Accounting & Compliance */}
         <Route path="/services/us-accounting-compliance" element={<UsAccountingPage />} />
         <Route path="/services/us-investment-hedge-accounting" element={<HedgeAccountingPage />} />
-        <Route path="/services/international-taxation" element={<InternationalTaxPage />} />
-        
-        {/* Sub-Service Pages under Real Estate Investment */}
-        <Route path="/services/dubai-real-estate-capital-bridge" element={<DubaiRealEstatePage />} />
 
         {/* Fallback Dynamic Route */}
         <Route path="/services/:slug" element={<ServiceDetailPage />} />

@@ -188,6 +188,61 @@ export function AboutPage() {
         </section>
 
         {/* ========================================================= */}
+        {/* CORE ADVISORY PRACTICE AREAS                              */}
+        {/* ========================================================= */}
+        <section className="about-roles-section">
+          <div className="section about-roles-container">
+            <div className="about-roles-header">
+              <div className="about-eyebrow">
+                <span className="about-dash-line" />
+                <span className="about-eyebrow-text">ADVISORY PRACTICE</span>
+              </div>
+              <h2 className="about-story-headline">
+                Strategic Consulting & Advisory Roles
+              </h2>
+            </div>
+
+            <div className="about-roles-grid">
+              <motion.div
+                className="about-role-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.1 }}
+              >
+                <div className="role-card-number">01</div>
+                <h3 className="role-card-title">Management Consultant to SMEs in the Infrastructure Sector</h3>
+                <p className="role-card-areas">
+                  <strong>Areas:</strong> Roads & Highways, Railways, Metro, Airport, Factory & Industrial Buildings, and Water Infrastructure.
+                </p>
+              </motion.div>
+
+              <motion.div
+                className="about-role-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.2 }}
+              >
+                <div className="role-card-number">02</div>
+                <h3 className="role-card-title">Insurance Risk Management Advisor</h3>
+              </motion.div>
+
+              <motion.div
+                className="about-role-card"
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <div className="role-card-number">03</div>
+                <h3 className="role-card-title">Dubai: Real Estate Investment Advisor & Channel Partner</h3>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* ========================================================= */}
         {/* 3. IMPACT / STATISTICS BAND (DEEP NAVY)                  */}
         {/* ========================================================= */}
         <section className="about-impact-section">

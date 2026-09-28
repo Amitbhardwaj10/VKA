@@ -57,8 +57,10 @@ export function HomePage() {
           <div className="hero-container">
             <motion.div className="hero-copy" style={{ opacity: heroOpacity }}>
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="eyebrow">
-                <span /> VKA CAPITAL BRIDGE
+                VKA CAPITAL BRIDGE
               </motion.div>
+              <div className="hero-founder">Founder: Vinod Kumar Agrawal</div>
+              <div className="hero-founder-sub">Advisor &amp; Management Consultant across infrastructure, finance and global real estate.</div>
 
               {/* Mobile Hero Visual: Appears directly after VKA CAPITAL BRIDGE and before heading */}
               <div className="hero-visual-mobile">
@@ -86,9 +88,6 @@ export function HomePage() {
                   and capital.
                 </SplitTextReveal>
               </h1>
-              <motion.p initial="hidden" animate="visible" variants={fadeUp}>
-                Advisor & Management Consultant across infrastructure, finance and global real estate.
-              </motion.p>
               <motion.div initial="hidden" animate="visible" variants={fadeUp} className="hero-actions">
                 <a className="button primary" href="#contact">
                   Start a conversation <ArrowUpRight size={17} />
@@ -325,7 +324,7 @@ export function HomePage() {
           <div className="dubai-bg" />
           <div className="dubai-overlay" />
           <div className="dubai-content">
-            <span className="section-no">03 / REAL ESTATE INVESTMENT</span>
+            <span className="section-no">03 / DUBAI REAL ESTATE</span>
             <h2>
               <SplitTextReveal>
                 Cross-Border<br /><em>Capital Strategy.</em>
@@ -354,7 +353,7 @@ export function HomePage() {
             >
               *Indicative/subject to property, market conditions and applicable regulatory terms.
             </p>
-            <Link className="button light-button" to="/services/real-estate-investment">
+            <Link className="button light-button" to="/services/dubai-real-estate-capital-bridge">
               Explore real estate capabilities <ArrowUpRight size={17} />
             </Link>
           </div>

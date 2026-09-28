@@ -264,11 +264,11 @@ export function ContactPage() {
             viewport={{ once: true }}
             transition={{ duration: 1 }}
           >
-            <span>UAE</span>
+            <span>INDIA</span>
             <div className="ct-strip-line">
               <div className="ct-strip-dot" />
             </div>
-            <span>INDIA</span>
+            <span>UAE</span>
           </motion.div>
         </section>
 
